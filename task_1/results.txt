@@ -1,0 +1,755 @@
+ENGLISH
+
+Good morning! How are you feeling today?
+
+token, stem, lemma, POS, dependency, head
+Good good good ADJ amod morning
+morning morn morning NOUN ROOT morning
+! ! ! PUNCT punct morning
+How how how SCONJ advmod feeling
+are are be AUX aux feeling
+you you you PRON nsubj feeling
+feeling feel feel VERB ROOT feeling
+today today today NOUN npadvmod feeling
+? ? ? PUNCT punct feeling
+
+dependency tree
+     morning    
+  ______|_____   
+Good          ! 
+
+        feeling          
+  _________|___________   
+How are   you   today  ? 
+
+
+chunks
+(S
+  (NP Good/ADJ morning/NOUN)
+  !/PUNCT
+  How/SCONJ
+  are/AUX
+  you/PRON
+  feeling/VERB
+  (NP today/NOUN)
+  ?/PUNCT)
+
+entities
+today DATE
+
+Maria travels to London every summer.
+
+token, stem, lemma, POS, dependency, head
+Maria maria Maria PROPN nsubj travels
+travels travel travel VERB ROOT travels
+to to to ADP prep travels
+London london London PROPN pobj to
+every everi every DET det summer
+summer summer summer NOUN npadvmod travels
+. . . PUNCT punct travels
+
+dependency tree
+      travels              
+   ______|_____________     
+  |      |      to   summer
+  |      |      |      |    
+Maria    .    London every 
+
+
+chunks
+(S
+  (NP Maria/PROPN)
+  travels/VERB
+  to/ADP
+  (NP London/PROPN)
+  (NP every/DET summer/NOUN)
+  ./PUNCT)
+
+entities
+Maria PERSON
+London GPE
+
+The University of Oxford was founded in the twelfth century.
+
+token, stem, lemma, POS, dependency, head
+The the the DET det University
+University univers University PROPN nsubjpass founded
+of of of ADP prep University
+Oxford oxford Oxford PROPN pobj of
+was was be AUX auxpass founded
+founded found found VERB ROOT founded
+in in in ADP prep founded
+the the the DET det century
+twelfth twelfth twelfth ADJ amod century
+century centuri century NOUN pobj in
+. . . PUNCT punct founded
+
+dependency tree
+        founded                                      
+  _________|_____________________________             
+ |   |          University               in          
+ |   |      ________|________            |            
+ |   |     |                 of       century        
+ |   |     |                 |      _____|_______     
+was  .    The              Oxford the         twelfth
+
+
+chunks
+(S
+  The/DET
+  (NP University/PROPN)
+  of/ADP
+  (NP Oxford/PROPN)
+  was/AUX
+  founded/VERB
+  in/ADP
+  (NP the/DET twelfth/ADJ century/NOUN)
+  ./PUNCT)
+
+entities
+The University of Oxford ORG
+the twelfth century DATE
+
+Barack Obama visited Berlin on Monday morning.
+
+token, stem, lemma, POS, dependency, head
+Barack barack Barack PROPN compound Obama
+Obama obama Obama PROPN nsubj visited
+visited visit visit VERB ROOT visited
+Berlin berlin Berlin PROPN dobj visited
+on on on ADP prep visited
+Monday monday Monday PROPN compound morning
+morning morn morning NOUN pobj on
+. . . PUNCT punct visited
+
+dependency tree
+       visited               
+   _______|______________     
+  |       |      |       on  
+  |       |      |       |    
+  |       |    Obama  morning
+  |       |      |       |    
+Berlin    .    Barack  Monday
+
+
+chunks
+(S
+  (NP Barack/PROPN Obama/PROPN)
+  visited/VERB
+  (NP Berlin/PROPN)
+  on/ADP
+  (NP Monday/PROPN)
+  (NP morning/NOUN)
+  ./PUNCT)
+
+entities
+Barack Obama PERSON
+Berlin GPE
+Monday DATE
+morning TIME
+
+The children are playing in the park after school.
+
+token, stem, lemma, POS, dependency, head
+The the the DET det children
+children children child NOUN nsubj playing
+are are be AUX aux playing
+playing play play VERB ROOT playing
+in in in ADP prep playing
+the the the DET det park
+park park park NOUN pobj in
+after after after ADP prep playing
+school school school NOUN pobj after
+. . . PUNCT punct playing
+
+dependency tree
+        playing             
+  _________|____________     
+ |   |     |      in    |   
+ |   |     |      |     |    
+ |   |  children park after 
+ |   |     |      |     |    
+are  .    The    the  school
+
+
+chunks
+(S
+  (NP The/DET children/NOUN)
+  are/AUX
+  playing/VERB
+  in/ADP
+  (NP the/DET park/NOUN)
+  after/ADP
+  (NP school/NOUN)
+  ./PUNCT)
+
+entities
+
+Apple produces iPhones in China and India.
+
+token, stem, lemma, POS, dependency, head
+Apple appl Apple PROPN nsubj produces
+produces produc produce VERB ROOT produces
+iPhones iphon iPhones PROPN dobj produces
+in in in ADP prep produces
+China china China PROPN pobj in
+and and and CCONJ cc China
+India india India PROPN conj China
+. . . PUNCT punct produces
+
+dependency tree
+              produces                
+   ______________|___________          
+  |      |       |           in       
+  |      |       |           |         
+  |      |       |         China      
+  |      |       |       ____|_____    
+Apple iPhones    .     and       India
+
+
+chunks
+(S
+  (NP Apple/PROPN)
+  produces/VERB
+  (NP iPhones/PROPN)
+  in/ADP
+  (NP China/PROPN)
+  and/CCONJ
+  (NP India/PROPN)
+  ./PUNCT)
+
+entities
+Apple ORG
+iPhones PRODUCT
+China GPE
+India GPE
+
+I read an interesting book about the history of Rome.
+
+token, stem, lemma, POS, dependency, head
+I i I PRON nsubj read
+read read read VERB ROOT read
+an an an DET det book
+interesting interest interesting ADJ amod book
+book book book NOUN dobj read
+about about about ADP prep book
+the the the DET det history
+history histori history NOUN pobj about
+of of of ADP prep history
+Rome rome Rome PROPN pobj of
+. . . PUNCT punct read
+
+dependency tree
+        read                             
+  _______|________                        
+ |   |           book                    
+ |   |    ________|_____________          
+ |   |   |        |           about      
+ |   |   |        |             |         
+ |   |   |        |          history     
+ |   |   |        |        _____|_____    
+ |   |   |        |       |           of 
+ |   |   |        |       |           |   
+ I   .   an  interesting the         Rome
+
+
+chunks
+(S
+  I/PRON
+  read/VERB
+  (NP an/DET interesting/ADJ book/NOUN)
+  about/ADP
+  (NP the/DET history/NOUN)
+  of/ADP
+  (NP Rome/PROPN)
+  ./PUNCT)
+
+entities
+Rome GPE
+
+The Danube flows into the Black Sea.
+
+token, stem, lemma, POS, dependency, head
+The the the DET det Danube
+Danube danub Danube PROPN nsubj flows
+flows flow flow VERB ROOT flows
+into into into ADP prep flows
+the the the DET det Sea
+Black black Black PROPN compound Sea
+Sea sea Sea PROPN pobj into
+. . . PUNCT punct flows
+
+dependency tree
+    flows                
+  ____|_________          
+ |    |        into      
+ |    |         |         
+ |  Danube     Sea       
+ |    |      ___|_____    
+ .   The   the      Black
+
+
+chunks
+(S
+  The/DET
+  (NP Danube/PROPN)
+  flows/VERB
+  into/ADP
+  the/DET
+  (NP Black/PROPN Sea/PROPN)
+  ./PUNCT)
+
+entities
+Danube LOC
+the Black Sea LOC
+
+The professor explained the lesson to the first-year students.
+
+token, stem, lemma, POS, dependency, head
+The the the DET det professor
+professor professor professor NOUN nsubj explained
+explained explain explain VERB ROOT explained
+the the the DET det lesson
+lesson lesson lesson NOUN dobj explained
+to to to ADP prep explained
+the the the DET det students
+first first first ADJ amod year
+- - - PUNCT punct year
+year year year NOUN compound students
+students student student NOUN pobj to
+. . . PUNCT punct explained
+
+dependency tree
+              explained                      
+  ________________|____________               
+ |      |         |            to            
+ |      |         |            |              
+ |      |         |         students         
+ |      |         |       _____|______        
+ |  professor   lesson   |           year    
+ |      |         |      |      ______|____   
+ .     The       the    the  first         - 
+
+
+chunks
+(S
+  (NP The/DET professor/NOUN)
+  explained/VERB
+  (NP the/DET lesson/NOUN)
+  to/ADP
+  the/DET
+  first/ADJ
+  -/PUNCT
+  (NP year/NOUN)
+  (NP students/NOUN)
+  ./PUNCT)
+
+entities
+first-year DATE
+
+Tomorrow we will go to the mountains together.
+
+token, stem, lemma, POS, dependency, head
+Tomorrow tomorrow tomorrow NOUN npadvmod go
+we we we PRON nsubj go
+will will will AUX aux go
+go go go VERB ROOT go
+to to to ADP prep go
+the the the DET det mountains
+mountains mountain mountain NOUN pobj to
+together togeth together ADV advmod go
+. . . PUNCT punct go
+
+dependency tree
+              go                        
+    __________|____________________      
+   |      |   |      |      |      to   
+   |      |   |      |      |      |     
+   |      |   |      |      |  mountains
+   |      |   |      |      |      |     
+Tomorrow  we will together  .     the   
+
+
+chunks
+(S
+  (NP Tomorrow/NOUN)
+  we/PRON
+  will/AUX
+  go/VERB
+  to/ADP
+  (NP the/DET mountains/NOUN)
+  together/ADV
+  ./PUNCT)
+
+entities
+Tomorrow DATE
+
+
+ROMANIAN
+
+Bună ziua! Cum te simți astăzi?
+
+token, stem, lemma, POS, dependency, head
+Bună bun bună ADJ amod ziua
+ziua ziu zi NOUN ROOT ziua
+! ! ! PUNCT punct ziua
+Cum cum cum ADV advmod simți
+te te tu PRON obj simți
+simți simț simți VERB ROOT simți
+astăzi astăz astăzi ADV advmod simți
+? ? ? PUNCT punct simți
+
+dependency tree
+     ziua    
+  ____|____   
+Bună       ! 
+
+    simți           
+  ____|___________   
+Cum   te  astăzi  ? 
+
+
+chunks
+(S
+  (NP Bună/ADJ ziua/NOUN)
+  !/PUNCT
+  Cum/ADV
+  te/PRON
+  simți/VERB
+  astăzi/ADV
+  ?/PUNCT)
+
+entities
+astăzi DATETIME
+
+Maria călătorește la Londra în fiecare vară.
+
+token, stem, lemma, POS, dependency, head
+Maria mari Maria PROPN nsubj călătorește
+călătorește călătoreșt călători AUX ROOT călătorește
+la la la ADP case Londra
+Londra londr Londra PROPN obl călătorește
+în în în ADP case vară
+fiecare fiec fiecare DET det vară
+vară var vară NOUN obl călătorește
+. . . PUNCT punct călătorește
+
+dependency tree
+          călătorește                 
+   ____________|___________            
+  |    |     Londra       vară        
+  |    |       |        ___|______     
+Maria  .       la      în      fiecare
+
+
+chunks
+(S
+  (NP Maria/PROPN)
+  călătorește/AUX
+  la/ADP
+  (NP Londra/PROPN)
+  în/ADP
+  (NP fiecare/DET vară/NOUN)
+  ./PUNCT)
+
+entities
+Londra GPE
+fiecare vară DATETIME
+
+Universitatea din Oxford a fost fondată în secolul al doisprezecelea.
+
+token, stem, lemma, POS, dependency, head
+Universitatea univers universitate NOUN nsubj:pass fondată
+din din din ADP case Oxford
+Oxford oxford Oxford PROPN nmod Universitatea
+a a avea AUX aux fondată
+fost fost fi AUX aux:pass fondată
+fondată fondat fonda VERB ROOT fondată
+în în în ADP case secolul
+secolul secol secol NOUN nmod:tmod fondată
+al al al DET det doisprezecelea
+doisprezecelea doisprezecel doisprezece NUM nummod secolul
+. . . PUNCT punct fondată
+
+dependency tree
+         fondată                                         
+  __________|_________________________                    
+ |   |      |    Universitatea     secolul               
+ |   |      |          |         _____|__________         
+ |   |      |        Oxford     |          doisprezecelea
+ |   |      |          |        |                |        
+ a  fost    .         din       în               al      
+
+
+chunks
+(S
+  (NP Universitatea/NOUN)
+  din/ADP
+  (NP Oxford/PROPN)
+  a/AUX
+  fost/AUX
+  fondată/VERB
+  în/ADP
+  (NP secolul/NOUN)
+  al/DET
+  doisprezecelea/NUM
+  ./PUNCT)
+
+entities
+Universitatea din Oxford ORGANIZATION
+secolul al doisprezecelea DATETIME
+
+Barack Obama a vizitat Berlinul luni dimineața.
+
+token, stem, lemma, POS, dependency, head
+Barack barack Barack PROPN nsubj vizitat
+Obama obam Obama PROPN flat Barack
+a a avea AUX aux vizitat
+vizitat vizit vizita VERB ROOT vizitat
+Berlinul berlin Berlin PROPN obj vizitat
+luni lun lună NOUN advmod vizitat
+dimineața dimineaț dimineața ADV advmod luni
+. . . PUNCT punct vizitat
+
+dependency tree
+             vizitat                 
+  ______________|_______________      
+ |     |        |    Barack    luni  
+ |     |        |      |        |     
+ a  Berlinul    .    Obama  dimineața
+
+
+chunks
+(S
+  (NP Barack/PROPN Obama/PROPN)
+  a/AUX
+  vizitat/VERB
+  (NP Berlinul/PROPN)
+  (NP luni/NOUN)
+  dimineața/ADV
+  ./PUNCT)
+
+entities
+Barack Obama PERSON
+Berlinul LOC
+
+Copiii se joacă în parc după școală.
+
+token, stem, lemma, POS, dependency, head
+Copiii copii copil NOUN nsubj joacă
+se se sine PRON expl:pv joacă
+joacă joac juca VERB ROOT joacă
+în în în ADP case parc
+parc parc parc NOUN obl joacă
+după dup după ADP case școală
+școală școal școală NOUN obl joacă
+. . . PUNCT punct joacă
+
+dependency tree
+           joacă            
+   __________|__________     
+  |     |    |   parc școală
+  |     |    |    |     |    
+Copiii  se   .    în   după 
+
+
+chunks
+(S
+  (NP Copiii/NOUN)
+  se/PRON
+  joacă/VERB
+  în/ADP
+  (NP parc/NOUN)
+  după/ADP
+  (NP școală/NOUN)
+  ./PUNCT)
+
+entities
+Copiii PERSON
+școală FACILITY
+
+Apple produce telefoane în China și India.
+
+token, stem, lemma, POS, dependency, head
+Apple apple Apple PROPN nsubj produce
+produce produc produce AUX ROOT produce
+telefoane telefoan telefoan NOUN obj produce
+în în în ADP case China
+China chin China PROPN obl produce
+și și și CCONJ cc India
+India indi India PROPN conj China
+. . . PUNCT punct produce
+
+dependency tree
+                produce                
+   ________________|__________          
+  |       |        |        China      
+  |       |        |      ____|_____    
+  |       |        |     |        India
+  |       |        |     |          |   
+Apple telefoane    .     în         și 
+
+
+chunks
+(S
+  (NP Apple/PROPN)
+  produce/AUX
+  (NP telefoane/NOUN)
+  în/ADP
+  (NP China/PROPN)
+  și/CCONJ
+  (NP India/PROPN)
+  ./PUNCT)
+
+entities
+Apple ORGANIZATION
+telefoane PRODUCT
+China GPE
+India GPE
+
+Am citit o carte interesantă despre istoria Romei.
+
+token, stem, lemma, POS, dependency, head
+Am am avea AUX aux citit
+citit citit citi VERB ROOT citit
+o o un DET det carte
+carte cart carte NOUN obj citit
+interesantă interes interesant ADJ amod carte
+despre despr despre ADP case istoria
+istoria istor istorie NOUN nmod carte
+Romei rome Romei PROPN nmod istoria
+. . . PUNCT punct citit
+
+dependency tree
+        citit                                 
+  ________|________                            
+ |   |           carte                        
+ |   |     ________|________________           
+ |   |    |        |             istoria      
+ |   |    |        |         _______|______    
+ Am  .    o   interesantă despre         Romei
+
+
+chunks
+(S
+  Am/AUX
+  citit/VERB
+  (NP o/DET carte/NOUN)
+  interesantă/ADJ
+  despre/ADP
+  (NP istoria/NOUN)
+  (NP Romei/PROPN)
+  ./PUNCT)
+
+entities
+carte PRODUCT
+Romei GPE
+
+Dunărea se varsă în Marea Neagră.
+
+token, stem, lemma, POS, dependency, head
+Dunărea dunăr Dunăre NOUN nsubj varsă
+se se sine PRON expl:pv varsă
+varsă vars vărsa VERB ROOT varsă
+în în în ADP case Marea
+Marea mar mare NOUN obl varsă
+Neagră neagr Neagră ADJ amod Marea
+. . . PUNCT punct varsă
+
+dependency tree
+            varsă                 
+    __________|_________           
+   |     |    |       Marea       
+   |     |    |     ____|_____     
+Dunărea  se   .    în       Neagră
+
+
+chunks
+(S
+  (NP Dunărea/NOUN)
+  se/PRON
+  varsă/VERB
+  în/ADP
+  (NP Marea/NOUN)
+  Neagră/ADJ
+  ./PUNCT)
+
+entities
+Dunărea GPE
+Marea Neagră GPE
+
+Profesorul a explicat lecția studenților din anul întâi.
+
+token, stem, lemma, POS, dependency, head
+Profesorul profesor profesor NOUN nsubj explicat
+a a avea AUX aux explicat
+explicat explic explica VERB ROOT explicat
+lecția lecț lecție NOUN obj explicat
+studenților studenț student NOUN nmod lecția
+din din din ADP case anul
+anul an an NOUN nmod studenților
+întâi întâ întâi NUM nummod anul
+. . . PUNCT punct explicat
+
+dependency tree
+               explicat                      
+     _____________|______________             
+    |       |     |            lecția        
+    |       |     |              |            
+    |       |     |         studenților      
+    |       |     |              |            
+    |       |     |             anul         
+    |       |     |       _______|________    
+Profesorul  a     .     din             întâi
+
+
+chunks
+(S
+  (NP Profesorul/NOUN)
+  a/AUX
+  explicat/VERB
+  (NP lecția/NOUN)
+  (NP studenților/NOUN)
+  din/ADP
+  (NP anul/NOUN)
+  întâi/NUM
+  ./PUNCT)
+
+entities
+Profesorul PERSON
+studenților PERSON
+anul întâi DATETIME
+
+Mâine vom merge împreună la munte.
+
+token, stem, lemma, POS, dependency, head
+Mâine mâin mâine ADV advmod merge
+vom vom vrea AUX aux merge
+merge merg merge VERB ROOT merge
+împreună împreun împreună ADV case munte
+la la la ADP fixed împreună
+munte munt munte NOUN obl merge
+. . . PUNCT punct merge
+
+dependency tree
+      merge             
+   _____|__________      
+  |     |    |   munte  
+  |     |    |     |     
+  |     |    |  împreună
+  |     |    |     |     
+Mâine  vom   .     la   
+
+
+chunks
+(S
+  Mâine/ADV
+  vom/AUX
+  merge/VERB
+  împreună/ADV
+  la/ADP
+  (NP munte/NOUN)
+  ./PUNCT)
+
+entities
+Mâine DATETIME
